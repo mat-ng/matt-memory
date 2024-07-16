@@ -20,6 +20,11 @@ type Sharder interface {
 	// If the key-value pair exists in the shard, returns true. Otherwise, returns false.
 	Has([]byte) bool
 
+	// Retrieves the TTL associated with the specified key stored in the shard.
+	// Returns the value as a time.
+	// If the key does not exist or the key has no TTL, return an error.
+	GetTtl([]byte) (time.Time, error)
+
 	// Returns a list of keys stored in the shard.
 	Range() []string
 }
