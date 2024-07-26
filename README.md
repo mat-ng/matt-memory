@@ -82,3 +82,6 @@ func main() {
 	}
 }
 ```
+
+## License
+[MIT License](https://github.com/mat-ng/matt-memory/blob/main/LICENSE)
